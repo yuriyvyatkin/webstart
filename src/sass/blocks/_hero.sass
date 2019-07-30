@@ -1,0 +1,60 @@
+.hero
+	padding: 50px 0
+	&-block
+		display: flex
+	&-text
+		flex-basis: 45%
+		padding-right: 120px
+		&__title
+			font-size: 41px
+			font-weight: 700
+			line-height: 55px
+			margin-bottom: 30px
+		&__subtitle
+			display: inline-block
+			font-size: 20px
+			font-weight: 500
+			margin-bottom: 70px
+		&__list
+			margin: 0
+			padding: 0
+	&-list
+		&__item
+			display: flex
+			align-items: center
+			margin-bottom: 30px
+		&__image
+			float: left
+			width: 40px
+			height: 40px
+			border: 2px solid $main-color
+			diplay: flex
+			align-items: center
+			justify-content: center
+			border-radius: 50%
+			margin-right: 30px
+	&-text__text
+		max-width: 300px
+@media (max-width: 1200px)
+	.hero
+		&-block
+			flex-direction: column
+		&-list
+			margin-bottom: 44px
+		&-text
+			padding-right: 10px
+@media (max-width: 768px)
+	.hero
+		&-text
+			&__title
+				font-size: 24px
+				line-height: 1.4
+				margin-bottom: 15px
+			&__subtitle
+				font-size: 16px
+				margin-bottom: 18px
+		&-list
+			&__item
+				margin-bottom: 20px
+			&__text
+				font-size: 12px
