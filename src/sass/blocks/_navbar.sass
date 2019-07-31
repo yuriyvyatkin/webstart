@@ -1,5 +1,7 @@
 .navbar
 	padding: 8px 0
+	font-size: 13px
+	line-height: 1.5
 	&-block
 		display: flex
 		justify-content: space-between
@@ -16,10 +18,9 @@
 	&__phone
 		display: inline-block
 		color: $text-color
-		font-size: 20px
-		font-weight: 400
+		font-size: 21px
 		text-decoration: none
-		margin-top: 10px
+		+bold
 @media (max-width: 768px)
 	.navbar
 		&__contacts
