@@ -4,7 +4,7 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>Домашнее задание №14</title>
+	<title>WebStart</title>
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
@@ -23,7 +23,7 @@
 							+7 (495) 42-251-31
 						</a>
 					</div>
-					<button class="button navbar__button">Перезвоните мне</button>
+					<button class="button navbar__button" id="button">Перезвоните мне</button>
 				</div>
 			</div>
 		</div>
@@ -83,20 +83,31 @@
 						<input type="tel" class="input offer__input" placeholder="Ваш телефон">
 						<button class="button offer__button">Получить бесплатный дизайн-проект</button>
 					</form>
-					<span class="offer__text">
-						Наш менеджер перезвонит Вам в течение 60 секунд
-					</span>
-					<span class="offer__text">
-						или перезвоните нам сами
-						<a href="tel:+7(495)42-251-31" class="offer__phone">
-							+7 (495) 42-251-31
-						</a>
-					</span>
+					<div class="offer__info">
+						<span class="offer__text">
+							Наш менеджер перезвонит Вам в течение 60 секунд
+						</span>
+						<span class="offer__text">
+							или перезвоните нам сами
+							<a href="tel:+7(495)42-251-31" class="offer__phone">
+								+7 (495) 42-251-31
+							</a>
+						</span>
+					</div>
 				</div>
 			</div>
 		</section>
 
 	</main>
+
+	<div class="modal" id="modal">
+		<div class="modal-dialog">
+			<button class="modal-dialog__close" id="close">&times;</button>
+			<h4 class="modal-dialog__title">Всплывающее окно</h4>
+		</div>
+	</div>
+
+	<script src="js/main.js"></script>
 
 </body>
 </html>

@@ -1,6 +1,6 @@
 .offer
 	background: url('../img/offer/offer-bg.jpg') no-repeat
-	background-position: 673px 0;
+	background-position: right center
 	background-size: contain
 	position: relative
 	&:before
@@ -31,13 +31,15 @@
 	&__button
 		width: 100%
 		min-height: 70px
+	&__info
+		display: flex
+		justify-content: space-between
 	&__text
-		display: inline-block
 		margin-top: 31px
 		max-width: 245px
+		line-height: 1.5
 		&:last-child
-			max-width: 200px
-			margin-left: 45px
+			max-width: 203px
 	&__phone
 		display: inline-block
 		color: $text-color
@@ -47,6 +49,8 @@
 @media (max-width: 1200px)
 	.offer
 		background-size: cover
+		&-block
+			padding-right: 40px
 		&__input
 			width: 100%
 			margin-bottom: 10px
@@ -55,6 +59,29 @@
 @media (max-width: 768px)
 	.offer
 		background: #ffffff
+		padding-top: 43px
+		&__title
+			max-width: 100%
+			margin-bottom: 18px
+			font-size: 18px
+			line-height: 22px
+			letter-spacing: -0.324px
+		&__subtitle
+			max-width: 100%
+			font-size: 14px
 		&-block
 			width: 100%
 			padding-right: 0
+		&__input
+			padding: 22px 21px
+		&__button
+			font-size: 15px
+			padding: 18px 30px
+@media (max-width: 538px)
+	.offer
+		&__info
+			flex-direction: column
+		&__text
+			margin-top: 21px
+		&__text:last-child
+			margin-top: 6px

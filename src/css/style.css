@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'Museo Sans Light';
-  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
-  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
+  src: url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot");
+  src: url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-300.eot?#iefix") format("embedded-opentype"), url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-300.woff") format("woff"), url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-300.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 
 @font-face {
   font-family: 'Museo Sans Bold';
-  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
-  src: url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
+  src: url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot");
+  src: url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-700.eot?#iefix") format("embedded-opentype"), url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-700.woff") format("woff"), url("../sass/fonts/MuseoSansCyrl/MuseoSansCyrl-700.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
@@ -30,26 +30,8 @@ img {
 
 .container {
   width: 1170px;
-  margin: auto;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    width: 760px;
-  }
-}
-
-@media (max-width: 768px) {
-  .container {
-    max-width: 580px;
-    width: 90%;
-  }
-}
-
-@media (max-width: 480px) {
-  .container {
-    width: 750px;
-  }
+  margin: 0 auto;
+  margin-top: 5px;
 }
 
 .button {
@@ -84,6 +66,28 @@ img {
   padding: 22px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: 730px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 580px;
+    width: 90%;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    width: 274px;
+  }
+  .section {
+    padding: 48px 0;
+  }
 }
 
 .navbar {
@@ -142,8 +146,8 @@ img {
     display: none;
   }
   .navbar__button {
-    font-size: 12px;
-    padding: 15px 26px;
+    font-size: 10px;
+    padding: 15px 27px;
   }
   .navbar__logo {
     width: 90px;
@@ -152,6 +156,7 @@ img {
 
 .hero {
   padding: 50px 0 7px 0;
+  background-color: #f5f5f5;
 }
 
 .hero-block {
@@ -204,18 +209,17 @@ img {
 }
 
 .hero-list__image {
-  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 40px;
   height: 40px;
-  border: 2px solid #ffd200;
-  diplay: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 50%;
   margin-right: 30px;
 }
 
@@ -223,12 +227,10 @@ img {
   max-width: 235px;
 }
 
-.hero-image {
-  margin-right: -35px;
-  margin-left: -35px;
-}
-
 @media (max-width: 1200px) {
+  .hero {
+    padding: 26px 0 45px 0;
+  }
   .hero-block {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -241,29 +243,44 @@ img {
   .hero-text {
     padding-right: 10px;
   }
+  .hero-image {
+    margin-top: 38px;
+  }
 }
 
 @media (max-width: 768px) {
+  .hero {
+    padding: 26px 0 45px 0;
+  }
+  .hero-text {
+    padding-right: 0px;
+  }
   .hero-text__title {
-    font-size: 24px;
+    font-size: 23px;
     line-height: 1.4;
-    margin-bottom: 15px;
+    margin-bottom: 4px;
   }
   .hero-text__subtitle {
     font-size: 16px;
-    margin-bottom: 18px;
+    margin-bottom: 29px;
+  }
+  .hero-text__text {
+    width: 200px;
+    margin-left: -15px;
+    font-size: 12px;
+    line-height: 1.3;
   }
   .hero-list__item {
     margin-bottom: 20px;
   }
-  .hero-list__text {
-    font-size: 12px;
+  .hero-image {
+    margin-top: 38px;
   }
 }
 
 .offer {
   background: url("../img/offer/offer-bg.jpg") no-repeat;
-  background-position: 673px 0;
+  background-position: right center;
   background-size: contain;
   position: relative;
 }
@@ -310,15 +327,23 @@ img {
   min-height: 70px;
 }
 
+.offer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .offer__text {
-  display: inline-block;
   margin-top: 31px;
   max-width: 245px;
+  line-height: 1.5;
 }
 
 .offer__text:last-child {
-  max-width: 200px;
-  margin-left: 45px;
+  max-width: 203px;
 }
 
 .offer__phone {
@@ -334,6 +359,9 @@ img {
   .offer {
     background-size: cover;
   }
+  .offer-block {
+    padding-right: 40px;
+  }
   .offer__input {
     width: 100%;
     margin-bottom: 10px;
@@ -346,10 +374,75 @@ img {
 @media (max-width: 768px) {
   .offer {
     background: #ffffff;
+    padding-top: 43px;
+  }
+  .offer__title {
+    max-width: 100%;
+    margin-bottom: 18px;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: -0.324px;
+  }
+  .offer__subtitle {
+    max-width: 100%;
+    font-size: 14px;
   }
   .offer-block {
     width: 100%;
     padding-right: 0;
   }
+  .offer__input {
+    padding: 22px 21px;
+  }
+  .offer__button {
+    font-size: 15px;
+    padding: 18px 30px;
+  }
+}
+
+@media (max-width: 538px) {
+  .offer__info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .offer__text {
+    margin-top: 21px;
+  }
+  .offer__text:last-child {
+    margin-top: 6px;
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal_active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.modal-dialog {
+  position: relative;
+  margin: auto;
+  max-width: 450px;
+  width: 200px;
+  background-color: #fff;
+  padding: 40px;
+}
+
+.modal-dialog__close {
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 /*# sourceMappingURL=style.css.map */
