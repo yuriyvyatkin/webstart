@@ -24,6 +24,33 @@ body {
   font-weight: 300;
 }
 
+body .button-up {
+  position: fixed;
+  bottom: 30px;
+  right: 15px;
+  width: 98px;
+  height: 98px;
+  background: #ffffff;
+  border-radius: 49px;
+  -webkit-box-shadow: 0px 0px 20px 3px #3687c4;
+          box-shadow: 0px 0px 20px 3px #3687c4;
+}
+
+body .button-up:before {
+  content: "";
+  display: block;
+  background: url("../img/button-up.png");
+  margin: 32px 0 0 22px;
+  width: 49px;
+  height: 24px;
+}
+
+body .button-up:hover {
+  cursor: pointer;
+  -webkit-box-shadow: 0px 0px 40px 3px #3687c4;
+          box-shadow: 0px 0px 40px 3px #3687c4;
+}
+
 img {
   max-width: 100%;
 }
@@ -155,7 +182,7 @@ img {
 }
 
 .hero {
-  padding: 50px 0 7px 0;
+  padding: 50px 0 57px 0;
   background-color: #f5f5f5;
 }
 
