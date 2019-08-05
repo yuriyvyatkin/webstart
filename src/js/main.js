@@ -2,7 +2,7 @@ var button = document.querySelector('#button');
 var modal = document.querySelector('#modal');
 var close = document.querySelector('#close');
 
-button.addEvenListener('click', function() {
+button.addEventListener('click', function() {
 	modal.classList.add('modal_active');
 });
 
