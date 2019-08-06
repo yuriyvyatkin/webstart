@@ -28,8 +28,8 @@ body .button-up {
   position: fixed;
   bottom: 30px;
   right: 15px;
-  width: 98px;
-  height: 98px;
+  width: 60px;
+  height: 60px;
   background: #ffffff;
   border-radius: 49px;
   -webkit-box-shadow: 0px 0px 20px 3px #3687c4;
@@ -40,7 +40,7 @@ body .button-up:before {
   content: "";
   display: block;
   background: url("../img/button-up.png");
-  margin: 32px 0 0 22px;
+  margin: 15px 0 0 3px;
   width: 49px;
   height: 24px;
 }
@@ -460,16 +460,104 @@ img {
 
 .modal-dialog {
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin: auto;
-  max-width: 450px;
-  width: 200px;
+  max-width: 1000px;
+  width: 570px;
   background-color: #fff;
-  padding: 40px;
+  padding: 73px 0 76px 0;
 }
 
 .modal-dialog__close {
   position: absolute;
   top: 0;
   right: 0;
+}
+
+.modal-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  text-align: center;
+  color: #333333;
+  width: 100%;
+}
+
+.modal-form__title {
+  display: block;
+  max-width: 301px;
+  line-height: 33px;
+  font-size: 22px;
+  margin: 0 auto 45px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.modal-form__subtitle {
+  display: block;
+  font-size: 16px;
+  margin-bottom: 52px;
+}
+
+.modal-form__postscript {
+  display: block;
+  width: 290px;
+  font-size: 15px;
+  line-height: 20px;
+  margin: 0 auto;
+}
+
+.modal-form__phone {
+  display: block;
+  font-size: 24px;
+  line-height: 37px;
+  color: #333333;
+  text-decoration: none;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
+}
+
+.callback-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 246px;
+}
+
+.callback__input {
+  width: 370px;
+  padding-left: 24px;
+  background-color: #ffffff;
+  margin-bottom: 15px;
+}
+
+.callback__button {
+  width: 368px;
+  padding: 28px;
+  margin-top: 15px 0 33px;
+  font-size: 16px;
+  font-family: 'Museo Sans Bold', sans-serif;
+  font-weight: 700;
 }
 /*# sourceMappingURL=style.css.map */

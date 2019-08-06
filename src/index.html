@@ -78,11 +78,12 @@
 					<span class="section-subtitle offer__subtitle">
 						Оставьте заявку на разработку бесплатного дизайн-проекта!
 					</span>
-					<form action="#" class="form offer__form">
-						<input type="text" class="input offer__input" placeholder="Ваше имя">
-						<input type="tel" class="input offer__input" placeholder="Ваш телефон">
+					<form action="#" id="offer-form" class="form offer__form">
+						<input type="text" name="username" class="input offer__input" placeholder="Ваше имя">
+						<input type="tel" name="userphone" class="input offer__input" placeholder="Ваш телефон">
 						<button class="button offer__button">Получить бесплатный дизайн-проект</button>
 					</form>
+					<div class="success"></div>
 					<div class="offer__info">
 						<span class="offer__text">
 							Наш менеджер перезвонит Вам в течение 60 секунд
@@ -103,16 +104,33 @@
 	<div class="modal" id="modal">
 		<div class="modal-dialog">
 			<button class="modal-dialog__close" id="close">&times;</button>
-			<h4 class="modal-dialog__title">Всплывающее окно</h4>
+			<div class="modal-column">
+				<!-- внутри div написать Контент -->
+				<div class="modal-content"></div> 
+			</div>
+			<div class="modal-form">
+				<span class="modal-form__title">Узнайте точную стоимость ремонта по телефону!</span>
+				<span class="modal-form__subtitle">Заполните поля ниже - мы свяжемся с Вами</span>
+				<form action="#" id="callback-form" class="callback-form">
+					<input type="text" name="username" class="input callback__input" placeholder="Ваше имя">
+					<input type="tel" name="userphone" class="input callback__input" placeholder="Ваш телефон">
+					<button class="button callback__button">Узнать стоимость</button>
+					<div class="success"></div>
+				</form>
+				<span class="modal-form__postscript">
+						Или Вы можете перезвонить нам сами по телефону:
+						<a href="tel:+7(495)42-251-31" class="modal-form__phone">
+							+7 (8182) 42-51-31
+						</a>
+				</span>
+			</div>
 		</div>
 	</div>
 
 	<div class="button-up"></div>
 
-	<!-- <script src="js/main.js"></script> -->
 	<script	src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-	<script src="js/modal.js"></script>
-	<script src="js/btn-up.js"></script>
+	<script src="js/scripts.js"></script>
 
 </body>
 </html>
