@@ -22,6 +22,7 @@
 body {
   font-family: 'Museo Sans Light', sans-serif;
   font-weight: 300;
+  color: #333333;
 }
 
 body .button-up {
@@ -81,6 +82,7 @@ img {
   font-size: 24px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+  text-align: center;
 }
 
 .section-subtitle {
@@ -93,6 +95,10 @@ img {
   padding: 22px 26px;
   font-size: 15px;
   border-radius: 10px;
+}
+
+.arrows__left:hover, .arrows__right:hover {
+  cursor: pointer;
 }
 
 @media (max-width: 1200px) {
@@ -333,6 +339,7 @@ img {
   line-height: 35px;
   margin-top: 0;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .offer__subtitle {
@@ -439,6 +446,80 @@ img {
   }
   .offer__text:last-child {
     margin-top: 6px;
+  }
+}
+
+.portfolio {
+  background: #f5f5f5 url("../img/portfolio/portfolio-pattern.jpg") repeat-y center left;
+  background-size: 50%;
+  padding-bottom: 96px;
+}
+
+.portfolio__title {
+  display: block;
+  max-width: 785px;
+  margin: 10px auto 95px;
+  font-size: 29px;
+  line-height: 1.5;
+}
+
+.portfolio__arrows {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 120px;
+  margin: 0 auto;
+  margin-top: 68px;
+}
+
+.slick-slide {
+  margin-right: 15px;
+  margin-left: 15px;
+}
+
+.owl-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  max-width: 120px;
+  margin: 0 auto;
+  margin-top: 68px;
+}
+
+@media (max-width: 770px) {
+  .slick-slide {
+    width: 246px;
+    margin-right: 121px;
+    margin-left: 121px;
+  }
+  .portfolio {
+    background: #f5f5f5;
+    padding-top: 29px;
+    padding-bottom: 60px;
+  }
+  .portfolio__title {
+    font-size: 17px;
+    line-height: 1.3;
+    margin-bottom: 40px;
+  }
+  .portfolio__arrows {
+    margin-top: 44px;
+  }
+  .owl-nav {
+    margin-top: 44px;
+  }
+  #owl-example {
+    max-width: 246px;
+    margin: 0 auto;
+  }
+  .owl-carousel .owl-item {
+    height: 186px;
   }
 }
 

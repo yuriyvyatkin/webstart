@@ -1,0 +1,48 @@
+.portfolio
+  background: $secondary url('../img/portfolio/portfolio-pattern.jpg') repeat-y center left
+  background-size: 50%
+  padding-bottom: 96px
+  &__title
+    display: block
+    max-width: 785px
+    margin: 10px auto 95px
+    font-size: 29px
+    line-height: 1.5
+  &__arrows
+    display: flex
+    justify-content: space-between
+    max-width: 120px
+    margin: 0 auto
+    margin-top: 68px
+.slick-slide
+  margin-right: 15px
+  margin-left: 15px
+.owl-nav
+  display: flex
+  justify-content: space-between
+  max-width: 120px
+  margin: 0 auto
+  margin-top: 68px
+@media (max-width: 770px)
+  .slick-slide
+    width: 246px
+    margin-right: 121px
+    margin-left: 121px
+  .portfolio
+    background: $secondary
+    padding-top: 29px
+    padding-bottom: 60px
+    &__title
+      font-size: 17px
+      line-height: 1.3
+      margin-bottom: 40px
+    &__arrows
+      margin-top: 44px
+  .owl-nav
+    margin-top: 44px
+  #owl-example
+    max-width: 246px
+    margin: 0 auto
+  .owl-carousel
+    .owl-item
+      height: 186px
