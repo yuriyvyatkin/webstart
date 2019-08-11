@@ -1,8 +1,9 @@
-//подключение библиотеки WOW
-new WOW().init()
-
-// Модальное окно с JS для кнопки Перезвоните мне
 $(document).ready(function(){
+  
+  //Подключение библиотеки WOW
+  new WOW().init()
+
+  // Модальное окно с JS для кнопки Перезвоните мне
   var button = $('#button');
   var modal = $('#modal');
   var close = $('#close');
@@ -14,6 +15,136 @@ $(document).ready(function(){
   close.on('click', function() {
     modal.removeClass('modal_active');
   })
+
+  //Действие кнопки button-up
+  $(".button-up").hide();
+  $(function () {
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 300) {$('.button-up').fadeIn();} 
+      else {$('.button-up').fadeOut();}
+    });
+    $('.button-up').click(function () {
+      $('body,html').animate({scrollTop: 0}, 400);
+      return false;
+    });
+  });
+
+  //Валидация форм
+  $('#offer-form').validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userphone: {
+        required: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле 1",
+        minlength: "Не менее 2 символов!",
+        maxlength: "Не более 15 символов!"
+      },
+      userphone: {
+        required: "Заполните поле 2",
+      },
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  $('#brif-form').validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userphone: {
+        required: true
+      },
+      email: {
+        required: true,
+        email: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле 1",
+        minlength: "Не менее 2 символов!",
+        maxlength: "Не более 15 символов!"
+      },
+      userphone: {
+        required: "Заполните поле 2",
+      },
+      email: {
+        required: "Заполните поле 3",
+        email: "Введите корректный email!"
+      }
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  $('#callback-form').validate({
+    rules: {
+      username: {
+        required: true,
+        minlength: 2,
+        maxlength: 15
+      },
+      userphone: {
+        required: true
+      }
+    },
+    messages: {
+      username: {
+        required: "Заполните поле 1",
+        minlength: "Не менее 2 символов!",
+        maxlength: "Не более 15 символов!"
+      },
+      userphone: {
+        required: "Заполните поле 2",
+      },
+    },
+    errorClass: "invalid",
+    errorElement: "div"
+  });
+
+  // маска для телефона
+  $('.phone').mask('+7 (999) 999-99-99');
+
+  // слайдер slick
+  $('.slider').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    prevArrow: $('.arrows__left'),
+    nextArrow: $('.arrows__right'),
+    responsive: [
+      {
+        breakpoint: 1201,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1
+        }
+      },
+      {
+        breakpoint: 801,
+        settings: {
+          centerMode: true,
+          variableWidth: true,
+          autoHeight:true,
+          autoHeightClass: 'owl-carousel',
+          responsiveBaseWidth: '#owl-example',
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  });
+
 });
 
 // AJAX запросы к модальному окну
@@ -47,20 +178,6 @@ $('#callback-form').on('submit', function(event) {
 
 // close.addEventListener('click', remove);
 
-//Действие кнопки button-up
-$(document).ready(function() {
-  $(".button-up").hide();
-  $(function () {
-    $(window).scroll(function () {
-      if ($(this).scrollTop() > 300) {$('.button-up').fadeIn();} 
-      else {$('.button-up').fadeOut();}
-    });
-    $('.button-up').click(function () {
-      $('body,html').animate({scrollTop: 0}, 400);
-      return false;
-    });
-  });
-});
 
 // AJAX запросы к блоку offer
 // $('#offer-form').on('submit', function(event) {
@@ -77,38 +194,8 @@ $(document).ready(function() {
 //   });
 // });
 
-// слайдер при помощи slick
-$(document).ready(function() {
-  $('.slider').slick({
-    slidesToShow: 3,
-    slidesToScroll: 1,
-    prevArrow: $('.arrows__left'),
-    nextArrow: $('.arrows__right'),
-    responsive: [
-      {
-        breakpoint: 1201,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 801,
-        settings: {
-          centerMode: true,
-          variableWidth: true,
-          autoHeight:true,
-          autoHeightClass: 'owl-carousel',
-          responsiveBaseWidth: '#owl-example',
-          slidesToShow: 1,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
-});
 
-//слайдер при помощи owl-carousel
+//слайдер owl-carousel
 // $(document).ready(function(){
 //   $(".owl-carousel").owlCarousel({
 //     loop: true,
