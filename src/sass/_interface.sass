@@ -32,6 +32,8 @@ img
 	background-color: $main-color
 	border: none
 	padding: 18px 32px
+	font-size: 16px
+	+bold
 	&:hover
 		background-color: lighten($main-color, 10%)
 		cursor: pointer
@@ -53,24 +55,31 @@ img
 	&__left, &__right
 		&:hover
 			cursor: pointer
+.invalid
+	&:nth-child(odd)
+		border: 1px solid red
+	&:nth-child(even)
+		margin: -15px 0 10px
+		padding: 5px
+		+bold
 @media (max-width: 1200px)
 	.container
 		width: 730px
+	.invalid
+		&:nth-child(even)
+			margin: -15px 0 5px
 @media (max-width: 800px)
 	.container
 		max-width: 580px
 		width: 90%
 	.button-up
 		display: none !important
+	.invalid
+		&:nth-child(even)
+			margin: -5px 0 0
 @media (max-width: 480px)
 	.container
 		width: 274px
 	.section
 		padding: 48px 0
-.invalid
-	&:nth-child(odd)
-		border: 1px solid red
-	&:nth-child(even)
-		margin-top: -10px
-		+bold
 		
