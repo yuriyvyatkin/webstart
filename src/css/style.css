@@ -946,8 +946,7 @@ img {
 
 @media (max-width: 800px) {
   .brif {
-    padding-top: 21px;
-    padding-bottom: 60px;
+    padding: 30px 0;
     background: none;
     background: -webkit-gradient(linear, left top, left bottom, color-stop(50%, #ffc000), color-stop(50%, rgba(255, 255, 255, 0)), color-stop(100%, rgba(255, 255, 255, 0)), to(#ffc000)), url("../img/brif/brif-bg.jpg") 100%;
     background: linear-gradient(to bottom, #ffc000 50%, rgba(255, 255, 255, 0) 50%, rgba(255, 255, 255, 0) 100%, #ffc000 100%), url("../img/brif/brif-bg.jpg") 100%;
@@ -1086,15 +1085,15 @@ img {
 .modal-form__subtitle {
   display: block;
   font-size: 16px;
-  margin-bottom: 52px;
+  margin-bottom: 50px;
 }
 
 .modal-form__postscript {
-  display: block;
+  display: inline-block;
   width: 290px;
   font-size: 15px;
   line-height: 20px;
-  margin: 0 auto;
+  margin: 35px auto 0;
 }
 
 .modal-form__phone {
@@ -1118,22 +1117,64 @@ img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 246px;
 }
 
 .callback__input {
-  width: 370px;
-  padding-left: 24px;
+  width: 100%;
+  max-width: 370px;
   background-color: #ffffff;
-  margin-bottom: 15px;
+  margin-bottom: 20px;
 }
 
 .callback__button {
-  width: 368px;
+  width: 100%;
+  max-width: 368px;
   padding: 28px;
-  margin-top: 15px 0 33px;
   font-size: 16px;
   font-family: 'Museo Sans Bold', sans-serif;
   font-weight: 700;
+}
+
+@media (max-width: 800px) {
+  .modal-dialog {
+    width: 400px;
+  }
+}
+
+@media (max-width: 480px) {
+  .modal-dialog {
+    width: 300px;
+  }
+  .modal-form__title {
+    margin-bottom: 22px;
+    font-size: 17px;
+    line-height: 1.5;
+  }
+  .modal-form__subtitle {
+    margin: 0 auto;
+    width: 174px;
+    margin-bottom: 35px;
+    font-size: 14px;
+  }
+  .modal-form__postscript {
+    max-width: 255px;
+    font-size: 14px;
+  }
+  .modal-form__phone {
+    font-size: 17px;
+  }
+  .callback-form {
+    margin: auto;
+    width: 274px;
+  }
+  .callback__input {
+    margin-bottom: 6px;
+    margin-bottom-padding: 23px 21px;
+  }
+  .callback__button {
+    margin-top: 6px;
+    margin-bottom: 25px;
+    font-size: 14px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
