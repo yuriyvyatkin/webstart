@@ -1,5 +1,35 @@
 $(document).ready(function(){
   
+  // Подключение к сайту карты от Яндекса, используя Yandex Map API
+  ymaps.ready(init);
+ 
+  function init(){    
+
+    var myMap;
+
+    myMap = new ymaps.Map("YMapsID", {
+        center: [55.61140907, 37.20112250],
+        zoom: 16,
+        controls: []
+    });
+    
+    myMap.behaviors.disable('scrollZoom');
+ 
+    myMap.controls.add("zoomControl", {
+        position: {top: 15, left: 15}
+    });
+
+    var myPlacemark = new ymaps.Placemark([55.611409, 37.201122] , {},
+      { iconLayout: 'default#image',
+        iconImageHref: 'https://www.imageup.ru/img27/3450302/pin.png',
+        iconImageSize: [34, 50],
+        iconImageOffset: [-18, -45] });     
+
+    myMap.geoObjects.add(myPlacemark);
+
+  }
+
+
   //Подключение библиотеки WOW
   new WOW().init()
 
