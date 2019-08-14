@@ -13,7 +13,8 @@
 	<link rel="stylesheet" href="css/normalize.css">
 	<link rel="stylesheet" href="css/style.css">
 
-	<script	defer src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://cdn.jsdelivr.net/npm/yandex-metrica-watch/tag.js", "ym"); ym(54902866, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true, trackHash:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54902866" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+	<script	defer src="js/jquery-3.4.1.min.js"></script>
 	<script src="https://api-maps.yandex.ru/2.1/?apikey=<a0146d36-2554-4798-a061-6df1f604580a>&lang=ru_RU" type="text/javascript"></script>
 	<script defer src="js/slick.min.js"></script>
 	<script defer src="js/owl.carousel.min.js"></script>
@@ -24,7 +25,7 @@
 
 </head>
 <body>
-<!-- 
+
 	<div class="nav navbar">
 		<div class="container">
 			<div class="navbar-block">
@@ -38,7 +39,7 @@
 							+7 (495) 42-251-31
 						</a>
 					</div>
-					<button class="button navbar__button" id="button">Перезвоните мне</button>
+					<button class="button navbar__button" onclick="ym(54902866, 'reachGoal', 'button'); return true;" id="button">Перезвоните мне</button>
 				</div>
 			</div>
 		</div>
@@ -93,7 +94,7 @@
 					<span class="section-subtitle offer__subtitle">
 						Оставьте заявку на разработку бесплатного дизайн-проекта!
 					</span>
-					<form action="#" id="offer-form" class="form offer__form">
+					<form action="#"  method="get" id="offer-form" class="form offer__form" onsubmit="ym(54902866, 'reachGoal', 'offer-form', goalParams); return true;">
 						<input type="text" name="username" class="input offer__input wow slideInLeft" placeholder="Ваше имя" data-wow-offset="200">
 						<input type="tel" name="userphone" class="input offer__input phone wow slideInRight" placeholder="Ваш телефон" data-wow-offset="200">
 						<button class="button offer__button wow slideInUp" data-wow-offset="105">Получить бесплатный дизайн-проект</button>
@@ -274,7 +275,7 @@
 		</section>
 
 	</main>
--->
+
 	<footer class="footer">
 	<div class="container">
 		<div class="map" id="YMapsID">
