@@ -1,5 +1,10 @@
 .footer
 	position: relative
+	&__phone
+		color: $text-color
+		font-size: 16px
+		text-decoration: none
+		+bold
 .map
 	position: absolute
 	left: 0
@@ -35,6 +40,8 @@
 			margin-right: 23px
 		&__text
 			line-height: 1.6
+			&_bold
+				+bold
 @media (max-width: 800px)
 	.map
 		width: 100%
